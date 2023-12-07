@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Name.module.scss";
+import { motion } from "framer-motion";
 
 function Name() {
   const name = "Mariya Abdul Ghafoor".split("");
@@ -35,31 +35,6 @@ function Name() {
           ))}
         </motion.h1>
       </div>
-      {/* .................. */}
-
-      {/* .................. */}
-
-      {/* ################# */}
-      {/* <motion.div
-        
-        animate="hover"
-        initial="default"
-       
-        className={styles.svgPath}
-      >
-        <motion.p variants={textVariants} className={styles.text}>
-          Mariya
-        </motion.p>
-        <motion.svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
-          <motion.path
-            variants={outlineVariants}
-            strokeWidth="1"
-            fill="none"
-            stroke="grey"
-            d="M 0, 0 H 100 V 20 H 0 Z"
-          />
-        </motion.svg>
-      </motion.div>{" "} */}
     </>
   );
 }

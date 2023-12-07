@@ -1,16 +1,9 @@
 import { useState } from "react";
-import ProjectList from "../ProjectList/ProjectList";
 import Projects from "../Projects/Projects";
 import styles from "./Portfolio.module.scss";
 import Navbar from "../Navbar/Navbar";
-import {
-  AnimatePresence,
-  easeOut,
-  motion,
-  useAnimationControls,
-} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import AboutMe from "../AboutMe/AboutMe";
-import PageTransitions from "../PageTransitions/PageTransitions";
 import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
 function Portfolio() {

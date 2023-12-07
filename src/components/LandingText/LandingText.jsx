@@ -3,7 +3,6 @@ import Name from "../Name/Name";
 import styles from "./LandingText.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import Portfolio from "../Portfolio/Portfolio";
-import ToggleButton from "../ToggleButton/ToggleButton";
 
 function LandingText() {
   const [showPortfolio, setShowPortfolio] = useState(false);
@@ -26,7 +25,6 @@ function LandingText() {
               transition: { duration: 3 },
             }}
             className={styles.portfolio__container}
-            // exit={{ y: -1000, opacity: 1, transition: { duration: 4 } }}
           >
             <Portfolio />
           </motion.div>

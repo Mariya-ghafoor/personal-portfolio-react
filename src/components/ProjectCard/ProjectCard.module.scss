@@ -1,0 +1,76 @@
+.project__container {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  //background-color: rgba(222, 216, 205, 0.723);
+  background: transparent;
+  padding: 50px;
+  padding-bottom: 10px;
+}
+
+.img__container {
+  position: relative;
+  height: 150px;
+  width: 250px;
+}
+
+.img__img {
+  height: 150px;
+  width: 250px;
+  //margin: 5px;
+  // box-shadow: 9px 6px 22px -1px rgba(0, 0, 0, 0.43);
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  transition: transform 0.2s;
+  // &:hover {
+  //   transform: scale(2);
+  // }
+}
+
+.img__techStack {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.375);
+
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.img__container:hover .img__techStack {
+  visibility: visible;
+  opacity: 1;
+}
+
+.project__details {
+  width: 100%;
+  height: 100%;
+  // background-color: rgba(0, 0, 0, 0.134);
+}
+
+.project__title {
+  font-size: 1rem;
+  color: #fe5454;
+  // background-color: black;
+  padding: 10px;
+}
+
+.project__desc {
+  font-size: 1rem;
+  height: max-content;
+}
+
+.project__icon {
+  &:hover {
+    color: rgb(254, 84, 84);
+  }
+}

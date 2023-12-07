@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+
+  color: white;
+  background-color: #fffbf6;
+  /* background-image: url(/assets/brush_stroke.jpg); */
+  /* background-image: url(/assets/universe.jpg); */
+  /* background-color: #fffbf6; */
+  /* background-color: black; */
+  background-size: cover;
+  caret-color: transparent;
+  font-family: "Ubuntu", sans-serif;
+  color: #002d72;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  /* height: 100vh; */
+
+
+}

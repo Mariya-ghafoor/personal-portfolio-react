@@ -1,0 +1,24 @@
+.projectList__container {
+  //margin-top: 100px;
+  // display: grid;
+  // gap: 1rem;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.progress {
+  position: fixed;
+  // left: 0;
+  // right: 0;
+  height: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(254, 84, 84);
+  bottom: 100px;
+  width: 60%;
+  text-align: center;
+}

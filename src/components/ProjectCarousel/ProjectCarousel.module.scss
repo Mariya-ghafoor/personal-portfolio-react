@@ -1,0 +1,117 @@
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+
+  background-color: transparent;
+}
+
+.slideshow {
+  margin: auto;
+  width: 70vw;
+  aspect-ratio: calc(16 / 9);
+  //aspect-ratio: calc(20 / 9);
+  //aspect-ratio: calc(1 / 1);
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.arrow__button {
+  padding: 16px;
+  font-size: 18px;
+  width: 64px;
+  //aspect-ratio: 1;
+  aspect-ratio: calc(20 / 9);
+  border-radius: 32px;
+  background-color: #0f0c295a;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+}
+
+button:hover {
+  background-color: #24243e;
+}
+
+.prevButton {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.nextButton {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project__image {
+  display: flex;
+
+  width: 80%;
+  height: 80%;
+  border: 5px solid rgb(0, 45, 114);
+  box-shadow: 10px 10px 67px 0px rgba(0, 0, 0, 0.75);
+
+  &:hover {
+  }
+}
+
+.project__details {
+  //position: absolute;
+
+  //background-color: rgba(0, 0, 0, 0.332);
+  color: rgb(0, 45, 114);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+  }
+
+  // left: 50%;
+  // right: 50%;
+}
+h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.project__icon {
+  aspect-ratio: calc(20 / 9);
+  border-radius: 10px;
+
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}

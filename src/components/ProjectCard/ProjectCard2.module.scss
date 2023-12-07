@@ -1,0 +1,88 @@
+.project__container {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: transparent;
+  padding: 5px;
+  padding-bottom: 10px;
+  width: 90vw;
+  overflow: hidden;
+  //gap: 0.5rem;
+  height: 100vh;
+  background: transparent;
+  //color: rgb(255, 251, 246);
+  font-size: 1rem;
+
+  @media only screen and (max-width: 768px) {
+    //flex-direction: column;
+  }
+
+  // height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // position: relative;
+  // scroll-snap-align: center;
+  // perspective: 500px;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  @media only screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+.project__img__container {
+  // width: 300px;
+  // height: 400px;
+  // position: relative;
+  // // max-height: 90vh;
+  // margin: 20px;
+  // //background: var(--white);
+  // overflow: hidden;
+}
+.project__img {
+  width: 500px;
+  height: 350px;
+  //box-shadow: 9px 6px 22px -1px rgba(0, 0, 0, 0.43);
+  border: 5px solid black;
+  //transition: transform 0.2s;
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+    height: 150px;
+  }
+
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  // width: 450px;
+  // height: 300px;
+}
+
+.project__details {
+  display: flex;
+  flex-direction: column;
+  font-family: "Ubuntu", sans-serif;
+  background-color: antiquewhite;
+  width: 100%;
+  padding: 10px;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    font-size: 0.5rem;
+  }
+}
+
+.project__desc {
+  //font-size: 1rem;
+}
+
+.project__icon {
+  &:hover {
+    color: rgb(254, 84, 84);
+  }
+}

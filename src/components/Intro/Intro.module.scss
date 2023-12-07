@@ -1,0 +1,57 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //font-size: 3.5rem;
+  font-family: "Comic Neue", cursive;
+  height: 100vh;
+  width: 100vw;
+  margin-top: -100px;
+  // margin-right: 100px;
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    font-size: 2rem;
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  // @media only screen and (min-width: 992px) {
+
+  // }
+}
+
+h2 {
+  font-family: "Montez", cursive;
+  color: rgb(254, 84, 84);
+  font-size: 4rem;
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    font-size: 3rem;
+  }
+}
+
+.iconone {
+  &:hover {
+    color: rgb(254, 84, 84);
+    transform: rotate(20deg);
+  }
+}
+
+.icontwo {
+  &:hover {
+    color: rgb(254, 84, 84);
+    transform: rotate(340deg);
+  }
+}

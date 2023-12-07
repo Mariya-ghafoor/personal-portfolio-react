@@ -1,0 +1,115 @@
+.navbar {
+  font-family: "Ubuntu", sans-serif;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100vw;
+  // background-color: black;
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+    // navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar)
+    position: absolute;
+    top: 60px;
+    left: 0;
+    // stacks the li tags vertically
+    // flex-direction: column;
+    // makes menu span full height and width
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid black;
+  }
+}
+.expanded {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // transition: 1s display;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 1rem;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+//-------Button styles
+
+.navLink {
+  width: 150px;
+  cursor: pointer;
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  // --color: #373b44;
+  // --color: rgb(236, 18, 18);
+  --color: #fe5454;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.active {
+  background: var(--color);
+  color: #fff;
+}
+
+//---------------
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  // border-radius: 50%;
+  background-color: transparent;
+
+  // // positions the icon to the right and center aligns it vertically
+  position: absolute;
+  top: 5%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none !important;
+  &:hover {
+    background-color: #fe5454;
+    color: white;
+  }
+  @media screen and (max-width: 768px) {
+    display: block !important;
+  }
+}

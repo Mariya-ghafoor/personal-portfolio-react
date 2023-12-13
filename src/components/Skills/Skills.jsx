@@ -1,7 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import styles from "./Skills.module.scss";
-import { easeIn, easeOut, motion, useAnimationControls } from "framer-motion";
+import {
+  AnimatePresence,
+  easeIn,
+  easeOut,
+  motion,
+  useAnimationControls,
+} from "framer-motion";
 import SkillsList from "../SkillsList/SkillsList";
 
 function Skills() {
@@ -12,19 +18,28 @@ function Skills() {
   let buttonStyles = "";
 
   const onFrontEndButtonClick = () => {
-    console.log("frontend button clicked");
-    console.log("show frontend before toggle " + showFrontend);
     if (showBackend === true) setShowBackend(!showBackend);
     setShowFrontend(!showFrontend);
-    console.log("show frontend after toggle " + showFrontend);
   };
 
   const onBackEndButtonClick = () => {
-    console.log("backend button clicked");
-    console.log("show backend before toggle " + showBackend);
     // if (showFrontend === true) setShowFrontend(!showFrontend);
     setShowBackend(!showBackend);
-    console.log("show backend after toggle " + showBackend);
+  };
+
+  const skillsVariants = {
+    hidden: { opacity: 1, height: 0 },
+    show: { opacity: 1, height: "fit-content", transition: { duration: 1 } },
+    exit: {
+      opacity: 1,
+      height: 0,
+      transition: { duration: 1 },
+    },
+  };
+
+  const swapSkillsVariants = {
+    hidden: { opacity: 0, height: "fit-content" },
+    show: { opacity: 1, height: "fit-content", transition: { duration: 3 } },
   };
 
   return (
@@ -47,7 +62,9 @@ function Skills() {
 
       {/* ^^^^ Skills section */}
 
-      <motion.div
+      {/* <motion.div
+        key="skills"
+        // initial={{ height: 0 }}
         initial={{ height: 0 }}
         animate={
           showFrontend || showBackend
@@ -59,29 +76,70 @@ function Skills() {
               }
             : { height: 0, transition: { duration: 0.5 } }
         }
-      >
+        // exit={{ height: 0, backgroundColor: "yellow" }}
+      > */}
+      <AnimatePresence mode="wait">
         {/* ^^^^^ Frontend skills */}
         {showFrontend && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.5 } }}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            variants={skillsVariants}
             className={styles.container__skills}
+            key="frontend"
           >
-            {showFrontend && <SkillsList skills="frontend" />}
+            <motion.div
+              initial={{ height: 0 }}
+              animate={
+                showFrontend || showBackend
+                  ? {
+                      height: "100%",
+                      width: "fit-content",
+                      // maxWidth: "90vw",
+                      overflow: "scroll",
+                      transition: { duration: 0.5 },
+                    }
+                  : { height: 0, transition: { duration: 0.5 } }
+              }
+              className={styles.skills}
+            >
+              {showFrontend && <SkillsList skills="frontend" />}
+            </motion.div>
           </motion.div>
         )}
 
         {/* ^^^^^ Backend skills */}
         {showBackend && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.5 } }}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            variants={skillsVariants}
             className={styles.container__skills}
+            key="backend"
           >
-            <SkillsList skills="backend" />
+            <motion.div
+              initial={{ height: 0 }}
+              animate={
+                showFrontend || showBackend
+                  ? {
+                      height: "100%",
+                      width: "fit-content",
+                      // maxWidth: "90vw",
+                      overflow: "scroll",
+                      transition: { duration: 0.5 },
+                    }
+                  : { height: 0, transition: { duration: 0.5 } }
+              }
+              className={styles.skills}
+            >
+              <SkillsList skills="backend" />
+            </motion.div>
           </motion.div>
         )}
-      </motion.div>
+      </AnimatePresence>
+      {/* </motion.div> */}
 
       {/* ^^^^ Backend Button */}
       <button

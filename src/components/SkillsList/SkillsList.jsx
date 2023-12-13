@@ -1,8 +1,7 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import SkillCard from "../SkillCard/SkillCard";
 
 function SkillsList({ skills }) {
-  console.log("receieved in skillslist " + skills);
   const frontendSkills = [
     {
       id: 1,

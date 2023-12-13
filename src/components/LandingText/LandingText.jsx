@@ -22,7 +22,7 @@ function LandingText() {
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 3 },
+              transition: { duration: 3, delay: 1 },
             }}
             className={styles.portfolio__container}
           >

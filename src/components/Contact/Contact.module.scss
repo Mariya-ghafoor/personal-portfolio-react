@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
 
-.form__main {
+.main {
   // background: linear-gradient(to bottom, #00000024, #00000024),
   //   url(https://res.cloudinary.com/dqifboxk5/image/upload/v1686209968/contact-us-2_y8zzx7.jpg)
   //     no-repeat center;
@@ -17,9 +17,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+
   .main__wrapper {
     border-radius: 10px;
     padding: 45px;
+
     width: 40%;
     box-shadow: 0 0 5px 5px #00000020;
     backdrop-filter: blur(5px);
@@ -29,13 +32,19 @@ body {
     }
     @media screen and (max-width: 767px) {
       width: 90%;
+      padding: 20px;
     }
+
     .form__head {
       font-size: 30px;
       line-height: 40px;
       font-weight: 600;
       text-align: center;
       margin: 0px 0 25px;
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
     .form__wrapper {
       display: flex;
@@ -84,20 +93,24 @@ body {
             -webkit-appearance: none;
             margin: 0;
           }
+          @media screen and (max-width: 767px) {
+            font-size: 15px;
+            line-height: 15px;
+          }
         }
 
-        .form__label {
-          position: absolute;
-          left: 25px;
-          top: 50%;
-          transform: translateY(-50%);
-          pointer-events: none;
-          transition: 0.3s;
-          margin: 0;
-          font-size: 18px;
-          line-height: 28px;
-          font-weight: 500;
-        }
+        // .form__label {
+        //   position: absolute;
+        //   left: 25px;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+        //   pointer-events: none;
+        //   transition: 0.3s;
+        //   margin: 0;
+        //   font-size: 18px;
+        //   line-height: 28px;
+        //   font-weight: 500;
+        // }
         .form__textarea {
           padding: 20px 25px 15px;
           width: 100%;
@@ -135,19 +148,23 @@ body {
           &:-webkit-autofill:active {
             transition: background-color 9999s ease-in-out 0s;
           }
+
+          @media screen and (max-width: 767px) {
+            font-size: 15px;
+          }
         }
-        .form__textarea-label {
-          position: absolute;
-          left: 25px;
-          top: 30%;
-          transform: translateY(-70%);
-          pointer-events: none;
-          transition: 0.3s;
-          margin: 0;
-          font-size: 18px;
-          line-height: 28px;
-          font-weight: 500;
-        }
+        // .form__textarea-label {
+        //   position: absolute;
+        //   left: 25px;
+        //   top: 30%;
+        //   transform: translateY(-70%);
+        //   pointer-events: none;
+        //   transition: 0.3s;
+        //   margin: 0;
+        //   font-size: 18px;
+        //   line-height: 28px;
+        //   font-weight: 500;
+        // }
       }
     }
   }
@@ -168,6 +185,12 @@ body {
   transition: all 0.5s ease;
   cursor: pointer;
   box-shadow: 0 0 5px 5px #00000020;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 30px;
+  }
 }
 .btn__wrap button:hover {
   border: 1px solid #000;

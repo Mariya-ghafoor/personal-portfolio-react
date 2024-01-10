@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import AboutMe from "../AboutMe/AboutMe";
 import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
+import Blogs from "../Blogs/Blogs";
 function Portfolio() {
   const [showSection, setShowSection] = useState("aboutMe");
 
@@ -33,6 +34,9 @@ function Portfolio() {
 
           {/* ^^^^^^^Projects^^^^^^^^^ */}
           {showSection === "projects" && <Projects />}
+
+          {/* ^^^^^^^Blogs^^^^^^^^^ */}
+          {showSection === "blogs" && <Blogs />}
 
           {/* ^^^^^^^Skills^^^^^^^^^ */}
           {showSection === "skills" && <Skills />}

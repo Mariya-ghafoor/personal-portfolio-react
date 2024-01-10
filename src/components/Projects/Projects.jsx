@@ -79,19 +79,25 @@ function Projects() {
   };
 
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className={styles.projects__container}
-    >
-      {projects &&
-        projects.map((project) => (
-          <motion.div className={styles.item} variants={item} key={project.id}>
-            <ProjectCard key={project.id} project={project} />
-          </motion.div>
-        ))}
-    </motion.div>
+    <>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className={styles.projects__container}
+      >
+        {projects &&
+          projects.map((project) => (
+            <motion.div
+              className={styles.item}
+              variants={item}
+              key={project.id}
+            >
+              <ProjectCard key={project.id} project={project} />
+            </motion.div>
+          ))}
+      </motion.div>
+    </>
   );
 }
 

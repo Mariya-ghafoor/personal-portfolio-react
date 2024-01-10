@@ -68,6 +68,21 @@ function Navbar({ showSection, setShowSection }) {
             Projects
           </button>
         </li>
+
+        <li>
+          <button
+            id="blogs"
+            onClick={onLinkClick}
+            className={
+              showSection === "blogs"
+                ? styles.active + " " + styles.navLink
+                : styles.navLink
+            }
+          >
+            Blog
+          </button>
+        </li>
+
         <li>
           <button
             id="skills"

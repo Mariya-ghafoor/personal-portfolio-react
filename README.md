@@ -22,5 +22,5 @@
 
 ## Future goals
 
-- Make it more interactive
-- Add Hamburger menu
+[ ] Make it more interactive
+[ x ] Add Hamburger menu

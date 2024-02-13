@@ -43,26 +43,27 @@ function Skills() {
   };
 
   return (
-    <motion.div className={styles.container}>
-      {/* ^^^^ Frontend Button */}
-      <button
-        onClick={() => {
-          if (showBackend) setShowBackend(!showBackend);
-          setShowFrontend(!showFrontend);
-        }}
-        className={
-          showFrontend
-            ? (buttonStyles = `${styles.active} ${styles.button}`)
-            : (buttonStyles = `${styles.button}`)
-        }
-        id="frontend"
-      >
-        Frontend
-      </button>
+    <div className={styles.main}>
+      <motion.div className={styles.container}>
+        {/* ^^^^ Frontend Button */}
+        <button
+          onClick={() => {
+            if (showBackend) setShowBackend(!showBackend);
+            setShowFrontend(!showFrontend);
+          }}
+          className={
+            showFrontend
+              ? (buttonStyles = `${styles.active} ${styles.button}`)
+              : (buttonStyles = `${styles.button}`)
+          }
+          id="frontend"
+        >
+          Frontend
+        </button>
 
-      {/* ^^^^ Skills section */}
+        {/* ^^^^ Skills section */}
 
-      {/* <motion.div
+        {/* <motion.div
         key="skills"
         // initial={{ height: 0 }}
         initial={{ height: 0 }}
@@ -78,85 +79,86 @@ function Skills() {
         }
         // exit={{ height: 0, backgroundColor: "yellow" }}
       > */}
-      <AnimatePresence mode="wait">
-        {/* ^^^^^ Frontend skills */}
-        {showFrontend && (
-          <motion.div
-            initial="hidden"
-            animate="show"
-            exit="exit"
-            variants={skillsVariants}
-            className={styles.container__skills}
-            key="frontend"
-          >
+        <AnimatePresence mode="wait">
+          {/* ^^^^^ Frontend skills */}
+          {showFrontend && (
             <motion.div
-              initial={{ height: 0 }}
-              animate={
-                showFrontend || showBackend
-                  ? {
-                      height: "100%",
-                      width: "fit-content",
-                      // maxWidth: "90vw",
-                      overflow: "scroll",
-                      transition: { duration: 0.5 },
-                    }
-                  : { height: 0, transition: { duration: 0.5 } }
-              }
-              className={styles.skills}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+              variants={skillsVariants}
+              className={styles.container__skills}
+              key="frontend"
             >
-              {showFrontend && <SkillsList skills="frontend" />}
+              <motion.div
+                initial={{ height: 0 }}
+                animate={
+                  showFrontend || showBackend
+                    ? {
+                        height: "100%",
+                        width: "fit-content",
+                        // maxWidth: "90vw",
+                        overflow: "scroll",
+                        transition: { duration: 0.5 },
+                      }
+                    : { height: 0, transition: { duration: 0.5 } }
+                }
+                className={styles.skills}
+              >
+                {showFrontend && <SkillsList skills="frontend" />}
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
+          )}
 
-        {/* ^^^^^ Backend skills */}
-        {showBackend && (
-          <motion.div
-            initial="hidden"
-            animate="show"
-            exit="exit"
-            variants={skillsVariants}
-            className={styles.container__skills}
-            key="backend"
-          >
+          {/* ^^^^^ Backend skills */}
+          {showBackend && (
             <motion.div
-              initial={{ height: 0 }}
-              animate={
-                showFrontend || showBackend
-                  ? {
-                      height: "100%",
-                      width: "fit-content",
-                      // maxWidth: "90vw",
-                      overflow: "scroll",
-                      transition: { duration: 0.5 },
-                    }
-                  : { height: 0, transition: { duration: 0.5 } }
-              }
-              className={styles.skills}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+              variants={skillsVariants}
+              className={styles.container__skills}
+              key="backend"
             >
-              <SkillsList skills="backend" />
+              <motion.div
+                initial={{ height: 0 }}
+                animate={
+                  showFrontend || showBackend
+                    ? {
+                        height: "100%",
+                        width: "fit-content",
+                        // maxWidth: "90vw",
+                        overflow: "scroll",
+                        transition: { duration: 0.5 },
+                      }
+                    : { height: 0, transition: { duration: 0.5 } }
+                }
+                className={styles.skills}
+              >
+                <SkillsList skills="backend" />
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      {/* </motion.div> */}
+          )}
+        </AnimatePresence>
+        {/* </motion.div> */}
 
-      {/* ^^^^ Backend Button */}
-      <button
-        onClick={() => {
-          if (showFrontend) setShowFrontend(!showFrontend);
-          setShowBackend(!showBackend);
-        }}
-        className={
-          showBackend
-            ? (buttonStyles = `${styles.active} ${styles.button}`)
-            : (buttonStyles = `${styles.button}`)
-        }
-        id="backend"
-      >
-        Backend
-      </button>
-    </motion.div>
+        {/* ^^^^ Backend Button */}
+        <button
+          onClick={() => {
+            if (showFrontend) setShowFrontend(!showFrontend);
+            setShowBackend(!showBackend);
+          }}
+          className={
+            showBackend
+              ? (buttonStyles = `${styles.active} ${styles.button}`)
+              : (buttonStyles = `${styles.button}`)
+          }
+          id="backend"
+        >
+          Backend
+        </button>
+      </motion.div>
+    </div>
   );
 }
 

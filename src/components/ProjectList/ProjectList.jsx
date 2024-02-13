@@ -6,6 +6,15 @@ function ProjectList() {
   const projects = [
     {
       id: 1,
+      title: "postcode api",
+      image: "/assets/postcodeAPI.png",
+      desc: "an api to search, view & add new postcodes to a remote database (CRUD) with Spring Boot security to register and authenticate users using JWTs & cookies. ",
+      // techStack: "frontend: react + typescript. backend: spring boot + mysql",
+      ghLink: "https://github.com/Mariya-ghafoor/employee-creator-frontend",
+      liveLink: "https://github.com/Mariya-ghafoor/employee-creator-frontend",
+    },
+    {
+      id: 1,
       title: "full stack app",
       image: "/assets/EmployeeCreatorApp.png",
       desc: "a full stack spring boot+ mysql + react + typescript for crud operations",

@@ -76,6 +76,15 @@ function Projects() {
       ghLink: "https://github.com/Mariya-ghafoor/morse-translator",
       liveLink: "https://mariya-ghafoor.github.io/morse-translator/",
     },
+    {
+      id: 9,
+      title: "react music player",
+      image: "/assets/react-music-player.png",
+      desc: "an app that can perform basic functions of a music player built in react js",
+      techStack: "react js",
+      ghLink: "https://github.com/Mariya-ghafoor/react-music-player",
+      liveLink: "https://taylorswiftradio.netlify.app/",
+    },
   ];
 
   const container = {
